@@ -74,7 +74,7 @@ public class TeamView {
 		if (employees == null || employees.length == 0) {
 			System.out.println("No employee found!");
 		} else {
-			System.out.println("TID/ID\tName\tAge\tSalary\tTitle\tStatus\tBonus\tStock\tEqupment");
+			System.out.println("TID/ID\tName\tAge\tSalary\tTitle\t\tStatus\tBonus\tStock\tEqupment");
 
 			for (int i = 0; i < employees.length; i++) {
 				System.out.println(employees[i]);
@@ -92,7 +92,7 @@ public class TeamView {
 		}else {
 			System.out.println("TID/ID\tName\tAge\tSalary\tTitle\tBonus\tStock");
 			for (int i = 0; i < team.length; i++) {
-				System.out.println(team[i].getDetailsOfTeam());
+				System.out.println(team[i].getDetailsForTeam());
 			}
 		}
 		

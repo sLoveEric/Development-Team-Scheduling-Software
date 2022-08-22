@@ -3,6 +3,9 @@
  */
 package team.domain;
 
+import team.domain.Employee;
+import team.domain.Equipment;
+
 import team.service.Status;
 
 /**
@@ -13,57 +16,53 @@ import team.service.Status;
  *
  */
 public class Programmer extends Employee {
+    private int memberId;
+    private Status status = Status.FREE;
+    private Equipment equipment;
 
-	private int memberId;// Project team ID
-	private Status status = Status.FREE;
-	private Equipment equipment;
+    public Programmer() {
+    }
 
-	public Programmer() {
-		super();
-	}
+    public Programmer(int id, String name, int age, 
+                       double salary, Equipment equipment) {
+        super(id, name, age, salary);
+        this.equipment = equipment;
+    }
 
-	public Programmer(int id, String name, int age, double salary, Equipment equipment) {
-		super(id, name, age, salary);
+    public Status getStatus() {
+        return status;
+    }
 
-		this.equipment = equipment;
-	}
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
-	public int getMemberId() {
-		return memberId;
-	}
+    public Equipment getEquipment() {
+        return equipment;
+    }
 
-	public void setMemberId(int memberId) {
-		this.memberId = memberId;
-	}
+    public void setEquipment(Equipment equipment) {
+        this.equipment = equipment;
+    }
 
-	public Status getStatus() {
-		return status;
-	}
+    public int getMemberId() {
+        return memberId;
+    }
 
-	public void setStatus(Status status) {
-		this.status = status;
-	}
+    public void setMemberId(int memberId) {
+        this.memberId = memberId;
+    }
 
-	public Equipment getEquipment() {
-		return equipment;
-	}
+    protected String getMemberDetails() {
+        return getMemberId() + "/" + getDetails();
+    }
 
-	public void setEquipment(Equipment equipment) {
-		this.equipment = equipment;
-	}
+    public String getDetailsForTeam() {
+        return getMemberDetails() + "\tProgrammer";
+    }
 
-	@Override
-	public String toString() {
-
-		return getDetails() + "\tProgrammer\t" + status + "\t\t\t" + equipment.getDescription();
-	}
-	
-	public String getTeamBasicInfo() {
-		return memberId + "/" + getId() + "\t" +getName() + "\t" +getSalary();
-	}
-	
-	public String getDetailsOfTeam() {
-		return  getTeamBasicInfo() + "\tProgrammer";
-	}
-
+    @Override
+    public String toString() {
+        return getDetails() + "\tProgrammer\t" + status + "\t\t\t" + equipment.getDescription() ;
+    }
 }
