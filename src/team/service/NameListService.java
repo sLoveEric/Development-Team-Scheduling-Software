@@ -68,7 +68,7 @@ public class NameListService {
 	/**
 	 * @Description Equipment for certain employee
 	 * @author SW
-	 * @date Jun. 27, 202210:43:32 a.m.
+	 * @date Jun. 27, 2022 10:43:32 a.m.
 	 *
 	 */
 	private Equipment createEquipment(int index) {
@@ -97,7 +97,7 @@ public class NameListService {
  * @Description get certain ID employee
  * @author SW
  * @throws TeamException 
- * @date Jun. 27, 202212:02:14 p.m.
+ * @date Jun. 27, 2022 12:02:14 p.m.
  *
  */
 	public Employee getEmployee(int id) throws TeamException {
