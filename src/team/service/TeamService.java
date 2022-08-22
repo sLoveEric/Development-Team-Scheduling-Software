@@ -99,7 +99,7 @@ public class TeamService {
 	 * 
 	 * @Description Determine if it already exists in the team
 	 * @author SW
-	 * @date Jun. 28, 20229:54:31 a.m.
+	 * @date Jun. 28, 2022 9:54:31 a.m.
 	 *
 	 */
 	private boolean isExist(Employee e) {
